@@ -12,9 +12,7 @@ pool:
 steps:
   - script: echo "my first maven application"
     displayName: 'Running a one-line script' 
-  
   - script: maven clean install
     displayName: 'Building a maven application'
-  
   - script: java -jar target/maven-1.0-SNAPSHOT.jar
     displayName: 'Running jar file'
