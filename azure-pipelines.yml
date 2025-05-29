@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- master
+  - master
 
 pool:
   name: Default
@@ -13,8 +13,8 @@ steps:
   - script: echo "my first maven application"
     displayName: 'Running a one-line script' 
   
-  - script: maven clean package
-    displayName: 'building a maven application'
+  - script: maven clean install
+    displayName: 'Building a maven application'
   
   - script: java -jar target/maven-1.0-SNAPSHOT.jar
-    displayName: 'Running maven application'
+    displayName: 'Running jar file'
