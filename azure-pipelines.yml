@@ -13,7 +13,7 @@ steps:
   - script: echo "my first maven application"
     displayName: 'Running a one-line script' 
   
-  - script: maven clean install
+  - script: maven clean package
     displayName: 'building a maven application'
   
   - script: java -jar target/maven-1.0-SNAPSHOT.jar
